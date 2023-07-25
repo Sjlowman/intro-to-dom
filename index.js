@@ -15,13 +15,20 @@ const checkPwd = () => {
   updateDOM(pwdValidity, pwdLength);
 };
 
+const resetPwdClassification = () => {
+  if (document.getElementById("pwdValidityText")) {
+    const pwdValidityText = document.body.lastChild;
+    document.body.removeChild(pwdValidityText);
+  }
+};
+
 const updateDOM = (pwdValidity, pwdLength) => {
+  resetPwdClassification();
   const progressBar = document.getElementById("pwdlength");
   /* const gameResult = document.createElement("gameResult"); */
   const progressFeedbackText = document.createElement("progressFeedbackText");
-  progressFeedbackText.setAttribute("id", "status");
+  progressFeedbackText.setAttribute("id", "pwdValidityText");
   progressBar.value = pwdLength * 5;
-  var pwdValidity = "";
 
   if (pwdValidity === "invalid") {
     pwdValidity = "Should be longer";
