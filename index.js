@@ -22,12 +22,11 @@ const resetPwdClassification = () => {
 
 const updateDOM = (pwdValidity, pwdLength) => {
   resetPwdClassification();
-  //const progressDivBar = document.getElementById("progressBarDiv");
   const progressFeedbackText = document.createElement("progressFeedbackText");
 
   progressFeedbackText.setAttribute("id", "pwdValidityText");
   document.getElementById("progressBarDiv").style.width = pwdLength * 5 + "px";
-
+  /* Will tidy this up and get rid of the multiple getElementById for the progressbar */
   if (pwdValidity === "invalid") {
     pwdValidity = "Should be longer";
     document.getElementById("progressBarDiv").style.backgroundColor = "red";

@@ -2,20 +2,6 @@ label {
   padding-right: 10px;
   font-size: 1rem;
 }
-progress {
-  margin: 5px auto;
-  padding: 2px;
-  width: 100%;
-  max-width: 15vw;
-  border: 3px solid #191a19;
-  height: 4vh;
-}
-
-.progress .progress__bar {
-  height: 100%;
-  width: 0%;
-  background-color: #05e32a;
-}
 
 .progressContainer {
   margin: 5px 0px;
