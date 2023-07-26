@@ -2,3 +2,36 @@ label {
   padding-right: 10px;
   font-size: 1rem;
 }
+progress {
+  margin: 5px auto;
+  padding: 2px;
+  width: 100%;
+  max-width: 15vw;
+  border: 3px solid #191a19;
+  height: 4vh;
+}
+
+.progress .progress__bar {
+  height: 100%;
+  width: 0%;
+  background-color: #05e32a;
+}
+
+.progressContainer {
+  margin: 5px 0px;
+  padding: 2px;
+  width: 20vw;
+  max-width: 20vw;
+  border: 2px solid #191a19;
+  height: 3vh;
+  background-color: rgb(192, 192, 192);
+  border-radius: 3px;
+}
+
+.progressBarDiv {
+  height: 100%;
+  width: 0px;
+  max-width: 20vw;
+  background-color: #4c2ad4;
+  border-radius: 3px;
+}

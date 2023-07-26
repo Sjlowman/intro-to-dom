@@ -10,8 +10,6 @@ const checkPwd = () => {
   } else if (pwdLength > 11) {
     pwdValidity = "optimal";
   }
-  console.log(pwdValidity);
-  /* Add check here.  Will calculate three statuses <8 = invalid, 8-11 incl = valid 12+ = optimal */
   updateDOM(pwdValidity, pwdLength);
 };
 
@@ -24,22 +22,23 @@ const resetPwdClassification = () => {
 
 const updateDOM = (pwdValidity, pwdLength) => {
   resetPwdClassification();
-  const progressBar = document.getElementById("pwdlength");
-  /* const gameResult = document.createElement("gameResult"); */
+  //const progressDivBar = document.getElementById("progressBarDiv");
   const progressFeedbackText = document.createElement("progressFeedbackText");
+
   progressFeedbackText.setAttribute("id", "pwdValidityText");
-  progressBar.value = pwdLength * 5;
+  document.getElementById("progressBarDiv").style.width = pwdLength * 5 + "px";
 
   if (pwdValidity === "invalid") {
     pwdValidity = "Should be longer";
+    document.getElementById("progressBarDiv").style.backgroundColor = "red";
   } else if (pwdValidity === "valid") {
     pwdValidity = "Pretty good";
+    document.getElementById("progressBarDiv").style.backgroundColor = "orange";
   } else {
-    pwdValidity = "Great";
+    pwdValidity = "Grrreat!";
+    document.getElementById("progressBarDiv").style.backgroundColor = "green";
   }
 
-  /*gameResult.textContent = outcome;
-  document.body.appendChild(gameResult); */
   progressFeedbackText.textContent = pwdValidity;
   document.body.appendChild(progressFeedbackText);
 };
