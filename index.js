@@ -25,7 +25,7 @@ const updateDOM = (pwdValidity, pwdLength) => {
   const progressFeedbackText = document.createElement("progressFeedbackText");
 
   progressFeedbackText.setAttribute("id", "pwdValidityText");
-  document.getElementById("progressBarDiv").style.width = pwdLength * 5 + "px";
+  document.getElementById("progressBarDiv").style.width = pwdLength + "vw";
   /* Will tidy this up and get rid of the multiple getElementById for the progressbar */
   if (pwdValidity === "invalid") {
     pwdValidity = "Should be longer";
